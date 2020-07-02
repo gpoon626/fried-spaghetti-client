@@ -1,7 +1,7 @@
 curl "http://localhost:4741/change-password" \
   --include \
   --request PATCH \
-  --header "Authorization: Token token=${TOKEN}" \
+  --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
   --data '{
     "passwords": {

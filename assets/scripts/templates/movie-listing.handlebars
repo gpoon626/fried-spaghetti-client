@@ -1,0 +1,19 @@
+{{#each movies as |movie|}}
+  {{log movie}}
+  <section data-id="{{movie.id}}">
+    <h6>Title:</h6>
+    <h3>
+      {{limit movie.title 15}}
+    </h3>
+    <h6>Rating:</h6>
+    <p>
+      {{#if movie.title}}
+        {{movie.rating}}
+      {{else}}
+        No rating provided.
+      {{/if}}
+    </p>
+    <button data-id="{{movie.id}}" class="btn btn-danger">Delete</button>
+  </section>
+
+{{/each}}

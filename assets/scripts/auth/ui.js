@@ -20,6 +20,8 @@ const signUserInSuccess = function (response) {
   store.user = response.user
 
   $('#change-password').show()
+  $('#create-movie').show()
+  $('#show-movie').show()
 
   $('#signup').hide()
   $('#sign-in').hide()
@@ -49,8 +51,9 @@ const signOutSuccess = function (response) {
   $('#message').text('Signed Out!')
   $('form').trigger('reset')
 
-  $('#game-board').hide()
   $('#change-password').hide()
+  $('#create-movie').hide()
+  $('#show-movie').hide()
 
   $('#sign-in').show()
   $('#sign-up-message').show()

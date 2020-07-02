@@ -45,11 +45,30 @@
           <button type="submit">Change Password</button>
           <span id="change-password-result"></span>
         </form>
+
       <button id="sign-out" type="click">Sign Out</button>
-      <button id="view-movies">View Movies</button>
+
+      <button id="view-movies" type="click">View Movies</button>
       </section>
 
      <p id="message"> </p>
+
+     <section id ="create-movie">
+        <p> Post a movie rating!</p>
+       <form id="create-movie-form">
+         <input type="text" name="movie[title]" placeholder="Title" required>
+         <input type="text" name="movie[rating]" placeholder="Rating" required>
+         <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id ="show-movie">
+      <p> Movie Search</p>
+      <form id="show-movie-form">
+        <input type="text" name="movie[title]" placeholder="Enter Movie Title" required>
+        <button type="submit">Search</button>
+      </form>
+    </section>
 
     </body>
 </html>
