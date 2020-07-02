@@ -22,6 +22,8 @@ const signUserInSuccess = function (response) {
   $('#change-password').show()
   $('#create-movie').show()
   $('#show-movie').show()
+  $('#update-movie').show()
+  $('#delete-movie').show()
 
   $('#signup').hide()
   $('#sign-in').hide()
@@ -54,6 +56,8 @@ const signOutSuccess = function (response) {
   $('#change-password').hide()
   $('#create-movie').hide()
   $('#show-movie').hide()
+  $('#update-movie').hide()
+  $('#delete-movie').hide()
 
   $('#sign-in').show()
   $('#sign-up-message').show()

@@ -17,10 +17,14 @@ $(() => {
   $('#change-password').hide()
   $('#create-movie').hide()
   $('#show-movie').hide()
+  $('#update-movie').hide()
+  $('#delete-movie').hide()
 
   $('#view-movies').on('click', movieAction.onViewMovies)
   $('#create-movie-form').on('submit', movieAction.onMovieCreate)
   $('#show-movie-form').on('submit', movieAction.onShowMovies)
+  $('#update-movie-form').on('submit', movieAction.onUpdateMovie)
+  $('#delete-movie-form').on('submit', movieAction.onDeleteMovie)
 
   // movieAction.addHandlers()
 })

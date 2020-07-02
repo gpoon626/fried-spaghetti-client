@@ -40,6 +40,32 @@ const onShowMovies = function (event) {
     .catch(ui.showMoviesFail)
 }
 
+// Update
+const onUpdateMovie = function (event) {
+  event.preventDefault()
+  // form info comes in
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.updateMovie(data)
+
+    .then(ui.updateMovieSuccess)
+    .catch(ui.updateMovieFail)
+}
+
+// DELETE
+const onDeleteMovie = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.deleteMovie(data)
+
+    .then(ui.deleteMovieSuccess)
+    .catch(ui.deleteMovieFail)
+}
+
 // handlers
 // const addHandlers = () => {
 //   $('#viewMovies').on('click', onViewMovies)
@@ -50,5 +76,7 @@ module.exports = {
   // addHandlers,
   onMovieCreate,
   onViewMovies,
-  onShowMovies
+  onShowMovies,
+  onUpdateMovie,
+  onDeleteMovie
 }

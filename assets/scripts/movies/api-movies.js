@@ -37,7 +37,7 @@ const viewMovies = function (data) {
 const showMovies = function (data) {
   return $.ajax({
     url: config.apiUrl + '/movies',
-    method: 'GET',
+    method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -49,8 +49,39 @@ const showMovies = function (data) {
   })
 }
 
+// Update
+const updateMovie = function (data) {
+  console.log(data)
+  return $.ajax({
+    url: config.apiUrl + '/movies/' + data.movie.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: {
+      movie: {
+        title: data.movie.title,
+        rating: data.movie.rating
+      }
+    }
+  })
+}
+
+// Delete
+const deleteMovie = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/movies/' + data.movie.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   movieCreate,
   viewMovies,
-  showMovies
+  showMovies,
+  updateMovie,
+  deleteMovie
 }
