@@ -19,6 +19,8 @@ $(() => {
   $('#show-movie').hide()
   $('#update-movie').hide()
   $('#delete-movie').hide()
+  $('#view-movies').hide()
+  $('#clearMoviesButton').hide()
 
   $('#view-movies').on('click', movieAction.onViewMovies)
   $('#create-movie-form').on('submit', movieAction.onMovieCreate)
@@ -26,5 +28,5 @@ $(() => {
   $('#update-movie-form').on('submit', movieAction.onUpdateMovie)
   $('#delete-movie-form').on('submit', movieAction.onDeleteMovie)
 
-  // movieAction.addHandlers()
+  movieAction.addHandlers()
 })

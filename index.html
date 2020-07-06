@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <head>
+        <title>Handlebars</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <!-- Do not add `link` tags-->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+        <!-- Do not add `script` tags-->
+        <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+        <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
       <h1>Fried Spaghetti</h1>
+      <h4>(For scary movie fans, by scary movie fans)</h4>
 
 
       <section id ="sign-in">
@@ -45,13 +47,12 @@
           <button type="submit">Change Password</button>
           <span id="change-password-result"></span>
         </form>
+        <button id="sign-out" type="click">Sign Out</button>
+     </section>
 
-      <button id="sign-out" type="click">Sign Out</button>
-
-      <button id="view-movies" type="click">View Movies</button>
-      </section>
 
      <p id="message"> </p>
+
 
      <section id ="create-movie">
         <p> Post a movie rating!</p>
@@ -87,6 +88,15 @@
       <button type="submit">Submit</button>
     </form>
    </section>
+
+   <nav>
+   <div class="nav-buttons">
+     <button id="view-movies" >View Movies!</button>
+     <button id="clearMoviesButton" >Clear Movies!</button>
+   </div>
+ </nav>
+
+   <div id="content" class="content"></div>
 
     </body>
 </html>

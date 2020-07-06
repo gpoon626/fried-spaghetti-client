@@ -27,6 +27,11 @@ const onViewMovies = function () {
     .catch(ui.viewMoviesFail)
 }
 
+const onClearMovies = (event) => {
+  event.preventDefault()
+  ui.clearMovies()
+}
+
 // show
 const onShowMovies = function (event) {
   event.preventDefault()
@@ -67,15 +72,16 @@ const onDeleteMovie = function (event) {
 }
 
 // handlers
-// const addHandlers = () => {
-//   $('#viewMovies').on('click', onViewMovies)
-//   $('.btn btn-danger').on('click', '.content', onDeleteMovies)
-// }
+const addHandlers = () => {
+  $('#viewMovies').on('click', onViewMovies)
+  $('#clearMoviesButton').on('click', onClearMovies)
+}
 
 module.exports = {
-  // addHandlers,
+  addHandlers,
   onMovieCreate,
   onViewMovies,
+  onClearMovies,
   onShowMovies,
   onUpdateMovie,
   onDeleteMovie

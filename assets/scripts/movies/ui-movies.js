@@ -1,4 +1,6 @@
 'use strict'
+
+const showMoviesTemplate = require('../templates/movie-listing.handlebars')
 const store = require('./../store')
 
 const movieCreateSuccess = function (response) {
@@ -13,6 +15,15 @@ const movieCreateFail = function () {
 
 const viewMoviesSuccess = function (data) {
   console.log(data)
+  store.movies = data.movies
+
+  const showMoviesHtml = showMoviesTemplate({movies: data.movies})
+
+  $('.content').append(showMoviesHtml)
+}
+
+const clearMovies = () => {
+  $('.content').empty()
 }
 
 const viewMoviesFail = function () {
@@ -49,6 +60,7 @@ module.exports = {
   movieCreateSuccess,
   movieCreateFail,
   viewMoviesSuccess,
+  clearMovies,
   viewMoviesFail,
   showMoviesSuccess,
   showMoviesFail,
