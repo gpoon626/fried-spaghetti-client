@@ -49,23 +49,7 @@ const showMovies = function (data) {
   })
 }
 
-// Update
-const updateMovie = function (data) {
-  console.log(data)
-  return $.ajax({
-    url: config.apiUrl + '/movies/' + data.movie.id,
-    method: 'PATCH',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    },
-    data: {
-      movie: {
-        title: data.movie.title,
-        rating: data.movie.rating
-      }
-    }
-  })
-}
+s
 
 // Delete
 const deleteMovie = function (data) {
