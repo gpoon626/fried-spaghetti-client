@@ -1,10 +1,11 @@
 {{#each movies as |movie|}}
   {{log movie}}
-  <section data-id="{{movie.id}}">
-    <h6>Title:</h6>
+  <section data-id="{{movie._id}}">
     <h3>
       {{limit movie.title 15}}
     </h3>
+    <h6>Rating ID</h6>
+    <p>{{movie._id}}</p>
     <h6>Rating:</h6>
     <p>
       {{#if movie.title}}
@@ -13,6 +14,11 @@
         No rating provided.
       {{/if}}
     </p>
+  <h6>Comments</h6>
+  {{#each movie.comments as |comment|}}
+  {{log comment}}
+  <p>{{comment.content}}</p>
+  {{/each}}
   </section>
 
 {{/each}}

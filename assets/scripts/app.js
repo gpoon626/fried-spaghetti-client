@@ -4,6 +4,7 @@
 // const example = require('./example')
 const userAction = require('./auth/events')
 const movieAction = require('./movies/events-movies')
+const commentAction = require('./comments/events-comments')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
@@ -21,12 +22,15 @@ $(() => {
   $('#delete-movie').hide()
   $('#view-movies').hide()
   $('#clearMoviesButton').hide()
+  $('#create-comment').hide()
 
   $('#view-movies').on('click', movieAction.onViewMovies)
   $('#create-movie-form').on('submit', movieAction.onMovieCreate)
   $('#show-movie-form').on('submit', movieAction.onShowMovies)
   $('#update-movie-form').on('submit', movieAction.onUpdateMovie)
   $('#delete-movie-form').on('submit', movieAction.onDeleteMovie)
+
+  $('#create-comment-form').on('submit', commentAction.onCreateComment)
 
   movieAction.addHandlers()
 })
